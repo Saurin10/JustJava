@@ -8,5 +8,5 @@
     <dimen name="bottomPad">16dp</dimen>
     <dimen name="leftPaddingCheckbox">24dp</dimen>
     <dimen name="toppingSize">16dp</dimen>
-    <dimen name="Test">40dp</dimen>
+    <dimen name="HiAgainRemoveTest">20dp</dimen>
 </resources>
