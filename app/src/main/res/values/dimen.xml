@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ShowPrice">16sp</dimen>
+    <dimen name="showOrder">16sp</dimen>
+    <dimen name="leftPad">16dp</dimen>
+    <dimen name="rightPad">16dp</dimen>
+    <dimen name="topPad">16dp</dimen>
+    <dimen name="bottomPad">16dp</dimen>
+    <dimen name="leftPaddingCheckbox">24dp</dimen>
+    <dimen name="toppingSize">16dp</dimen>
+</resources>
