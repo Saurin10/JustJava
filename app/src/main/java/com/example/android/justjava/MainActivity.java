@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             quantity = 10;
         }
         else {
-            quantity = quantity + 1;
+            quantity += 1;
         }
         displayQuantity(quantity);
     }
