@@ -2,6 +2,7 @@ package com.example.android.justjava;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -37,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         int price = calculatePrice(hasWhippedCream, hasChocolate);
         String printMessage = createOrderSummary(price, hasWhippedCream, hasChocolate, userName);
         //displayMessage(printMessage);
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text/html");
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"));
         intent.putExtra(Intent.EXTRA_EMAIL, "saurinhdave@gmail.com");
         intent.putExtra(Intent.EXTRA_SUBJECT,"Test Android Intent");
         intent.putExtra(Intent.EXTRA_TEXT, printMessage);
@@ -67,13 +68,14 @@ public class MainActivity extends AppCompatActivity {
     private String createOrderSummary(int price, boolean hasWhippedCream, boolean hasChocolate,
                                       String uName) {
         //boolean isChecked = ((CheckBox) findViewById(R.id.whippedCreamCheckBox)).isChecked();
-        String name = "Name: " + uName;
+        String name = getString(R.string.client_name, uName);
         String whippedCream = "Add Whipped Cream? " + hasWhippedCream;
         String chocolate = "Add Chocolate? " + hasChocolate;
         String stringQuantity = "Quantity: " + quantity;
         String total = "Total: $" + price;
+        String thankYou ="\n" + getString(R.string.thank_you);
         return (name + "\n" + whippedCream + "\n" + chocolate + "\n" + stringQuantity + "\n" + total
-                + "\nThank You!");
+                + thankYou);
     }
 
     /**
